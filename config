@@ -1,5 +1,5 @@
-name                            : Total.js
-author                          : You company name
+name                            : Hamlet's Webpage
+author                          : Hamlet
 version                         : 1.0.0
 secret                          : secret-key-for-web
 
@@ -9,3 +9,8 @@ mail-smtp-options               : {"secure":false,"port":25,"user":"","password"
 mail-address-from               : your@yourwebsite.com
 mail-address-reply              : your@yourwebsite.com
 mail-address-copy               :
+
+// Preferred default directories
+static-url-script								: /j/
+static-url-style								: /c/
+static-url-image								: /i/

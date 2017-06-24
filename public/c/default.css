@@ -1,0 +1,98 @@
+$color    : #67B13D;
+
+body { 
+	padding:0;
+	margin:0;
+	font:normal 14px Arial;
+	color:#656D78;
+	background-color: red;
+	line-height: 20px;
+}
+.container-background { 
+	background-color: white; 
+}
+.container { 
+	margin:0 auto; 
+	width: 100%; 
+	padding: 50px 0; 
+}
+.center { 
+	text-align: center; 
+}
+hr { 
+	border: 0; 
+	border-top: 1px solid #E0E0E0; 
+}
+.linkbutton { 
+	 display: inline-block;
+	 position: relative;
+	 padding: 15px 80px;
+	 color: $color;
+	 border: 1px solid $color;
+	 text-decoration: none;
+	 border-radius: 4px;
+}
+.linkbutton:hover { 
+	color: white;
+  background-color: $color;
+}
+#intro {
+	margin-left: 150px;
+}
+#profPic {
+	width: 300px;
+	border-radius: 200px;
+	position: relative;
+	right: 5%;
+	display: inline-block;
+}
+div#contact {
+	display: inline-block;
+	position: relative;
+	left: 50px;
+	bottom: 180px;
+}
+div#contact > ul {
+	line-height: 30px;
+}
+#docs, #conversions, #projects {
+	text-align: center;
+	min-height: 55vw;
+}
+#cover, #resume {
+	display: inline-block;
+	box-sizing: border-box;
+}
+#resume {
+	position: absolute;
+	left: 0;
+	width: 30vw;
+	margin-left: 13vw;
+}
+#cover {
+	position: absolute;
+	right: 0;
+	width: 33vw;
+	margin-right: 13vw;
+}
+#docs:hover {
+	/*overflow: none;*/
+	/*background-color: black;*/
+}
+#resume:hover {
+	width: 34vw;
+	border: 3px $color solid;
+	/*top: 200px;*/
+}
+#cover:hover {
+	width: 37vw;
+	border: 3px $color solid;
+	/*top: 200px;*/
+}
+#conversions {
+}
+footer { 
+	color: white;
+  text-align: center;
+  margin-top: 20px;
+}

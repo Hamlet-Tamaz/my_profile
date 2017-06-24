@@ -1,0 +1,7 @@
+USE STYLE.SCSS FOR CSS
+
+dark liver (grey) : #50514F
+sunset orange (red) : #F25F5C
+mustard (yellow) : #FFEO66
+lapis Lzuli (blue) : #247BAO
+green sheen (green) : #70C1B3

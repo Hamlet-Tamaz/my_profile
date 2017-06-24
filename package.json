@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "[![Support](https://www.totaljs.com/img/button-support.png)](https://www.totaljs.com/support/)",
+  "main": "debug.js",
+  "dependencies": {
+    "sass": "^1.0.0-beta.1",
+    "total.js": "^2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node debug.js | sass --watch public/c/input.scss:public/c/output.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
