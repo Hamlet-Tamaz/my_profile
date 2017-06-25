@@ -12,7 +12,7 @@ body {
 	margin: 0 auto;
 	color: #b0b4be;
 	font-family: Lato;
-	height: 2460px;
+	height: 2340px;
 	background-color: white;
 }
 header {
@@ -191,7 +191,7 @@ nav li a {
 	z-index: 2;
 	width: 100vw;
 	background-color: rgb(65,79,107);
-	top: 1870px;
+	top: 1765px;
 }
 #tabs div{
 	max-width: 1000px;
