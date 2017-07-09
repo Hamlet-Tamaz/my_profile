@@ -141,6 +141,7 @@ div#contact li {
 	margin: 0 3vw;
 	width: 40%;
 	max-width: 400px;
+	box-shadow: 0 0 20px 3px #888888;
 }
 #conv1 {
 	@extend #cover;
@@ -249,6 +250,7 @@ footer {
 	color: white;
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 1100px) {
