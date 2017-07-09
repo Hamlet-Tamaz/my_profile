@@ -38,6 +38,8 @@ function clear(e, t) {
 
 
 function drop(e) {
+	e.preventDefault();
+
 	var drop = e.target.nextElementSibling,
 		tabs = document.querySelectorAll('.drop, .drop2');
 

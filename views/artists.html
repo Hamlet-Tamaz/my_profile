@@ -1,0 +1,96 @@
+@{title('Artists')}
+@{layout('gallery_layout')}
+
+<div id="artists">
+	<div id="form">
+		<form id='newArtist' action="/gallery/artists" method="post">
+			<h2 class='center'>Add New Artist</h2>
+			
+			<br>
+			
+			<div class='ro'>
+				<label class='col col-2' for="fname">First Name: </label><input class='col col-3' name='fname' type="text" placeholder="John" autofocus required>
+			
+				<br>
+			
+				<label class='col col-2' for="lname">Last Name: </label><input class='col col-3' name='lname' type="text" placeholder="Smith" required>
+			</div>
+			
+			<br>
+			
+			<div class='ro'>
+				<label class='col col-2' for="dob">Date of Birth: </label><input class='col col-3' name='dob' type="date">
+			
+				<br>
+
+				<label class='col col-2' for="email">Email: </label><input class='col col-3' name='email' type="text" placeholder="youremail@domain.com" required>
+			</div>
+
+			<br>
+			<input type="submit" class='btn'>
+		</form>
+
+		<form id='editArtist' action="" method="put">
+			<h2 class='center'>Edit Artist</h2>
+
+			<br>
+				
+			<div class="ro">
+				<input type="hidden" name='id'>
+				<label class='col col-2' for="fname">First Name: </label><input class='col col-3' name='fname' type="text" placeholder="John" required autofocus='autofocus'>
+				<br>
+				<label class='col col-2' for="lname">Last Name: </label><input class='col col-3' name='lname' type="text" placeholder="Smith" required>
+			</div>
+
+			<br>
+			
+			<div class="ro">
+				<label class='col col-2' for="dob">Date of Birth: </label><input class='col col-3' name='dob' type="date">
+				<br>
+				<label class='col col-2' for="email">Email: </label><input class='col col-3' name='email' type="text" placeholder="youremail@domain.com" required>
+			</div>
+			<br>
+			<br>
+			<input type="submit" class='btn'>
+			<button class='btn'>Add NEW Artist</button>
+		</form>
+		
+		@{if repository.flash == 'edits_saved'}
+			<p class='success'>Your changes were successfully saved.</p>
+		@{fi}
+		@{if repository.flash == 'added'}
+			<p class='success'>Your artist was successfully added.</p>
+		@{fi}
+	</div>
+
+
+<hr />
+<br />
+	
+	<p>*click on artists to see their art</p>
+	<h2>Artists</h2>
+
+	<table>
+		<tr class='row'>
+			<th class='col-1'>ID</th>
+			<th class='col-2'>First Name</th>
+			<th class='col-2'>Last Name</th>
+			<th class='col-2'>Date of Birth</th>
+			<th class='col-3'>Email</th>
+			<th class='col-1'>Edit</th>
+			<th class='col-1'>Delete</th>
+		</tr>
+		@{foreach i in model}
+			<tr class='item row'>
+				<td class='cl col-1'>@{i.id}</td>
+				<td class='cl col-2'>@{i.first_name}</td>
+				<td class='cl col-2'>@{i.last_name}</td>
+				<td class='cl col-2' rel='@{i.dob.format("yyyy-MM-dd")}'>@{i.dob.format('dd MMMM yyyy')}</td>
+				<td class='cl col-3'>@{i.email}</td>
+				<td class='col-1'><a class='glyphE' href="#form" data-get-edit-url='/gallery/artists/@{i.id}/edit' data-make-edit-url='/gallery/artists/@{i.id}'><span class='fa fa-edit fa-2x'></span></a></td>
+				<td class='col-1'><a class='glyphD' data-url='/gallery/artists/@{i.id}'><span class='fa fa-remove fa-2x'></span></a></td>
+			</tr>
+		@{end}
+	</table>
+
+</div>

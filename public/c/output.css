@@ -9,9 +9,13 @@ nav {
 
 nav ul {
   margin-top: 0;
-  margin-right: 50px;
   text-align: right;
-  line-height: 50px; }
+  line-height: 50px;
+  padding: 0; }
+
+@media (min-width: 450px) {
+  nav ul {
+    margin-right: 50px; } }
 
 nav ul li {
   display: inline-block;
@@ -24,9 +28,14 @@ nav ul li a {
 nav ul li a:hover {
   color: #F25F5C; }
 
+header#main {
+  z-index: 100; }
+
 header#miniNav {
-  position: relative;
-  top: -14px;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 50px;
   border-top: 1px solid white; }
 
 header#miniNav li:nth-child(1) {
@@ -38,7 +47,7 @@ body {
   margin: 0;
   font: normal 14px Arial;
   color: #656D78;
-  background-color: #70C1B3;
+  background-color: #247BA0;
   line-height: 20px; }
 
 .container-background {
@@ -60,14 +69,18 @@ hr {
   display: inline-block;
   position: relative;
   padding: 15px 80px;
-  color: #70C1B3;
-  border: 1px solid #70C1B3;
+  color: #F25F5C;
+  border: 1px solid #F25F5C;
   text-decoration: none;
   border-radius: 4px; }
 
 .linkbutton:hover {
   color: white;
-  background-color: #70C1B3; }
+  background-color: #F25F5C; }
+
+div#aboutme, div#home {
+  margin: 0 auto;
+  max-width: 550px; }
 
 #intro {
   margin-left: 150px; }
@@ -86,7 +99,15 @@ div#contact {
   bottom: 180px; }
 
 div#contact > ul {
-  line-height: 30px; }
+  line-height: 30px;
+  list-style: none; }
+
+div#contact .linkbutton {
+  width: 200px;
+  padding: 10px; }
+
+div#contact li {
+  margin: 5px 0; }
 
 #docs, #conversions, #projects {
   text-align: center;
@@ -108,12 +129,12 @@ div#contact > ul {
 #conv1 {
   display: block;
   margin: 0 auto;
-  width: 60%;
+  width: 58%;
   margin-bottom: 20px;
   max-width: none; }
 
 #resume:hover, #cover:hover, #conv1:hover, #conv2:hover, #conv1:hover {
-  width: 48%;
+  width: 47%;
   border: 3px #70C1B3 solid;
   padding: 10px;
   max-width: none;
@@ -121,7 +142,7 @@ div#contact > ul {
   /*top: 200px;*/ }
 
 #conv1:hover {
-  width: 70%;
+  width: 75%;
   max-width: none; }
 
 .tile {
@@ -132,7 +153,7 @@ div#contact > ul {
   cursor: pointer;
   padding: 10px; }
   .tile_hover img {
-    width: 49%; }
+    width: 48%; }
 
 .tile img:nth-child(1) {
   margin: 0;
@@ -142,45 +163,91 @@ div#contact > ul {
   margin: 0;
   margin-left: 5px; }
 
-#proj2 {
+#lonelyTable {
   line-height: 10px; }
 
-#proj3 img:nth-child(1) {
+#flink img:nth-child(1) {
   position: relative;
   bottom: 110px; }
 
 #display {
   margin: 10px; }
 
-div#area div {
-  height: 500px;
+#display #instructions {
+  margin: 0 3vw; }
+
+#display #instructions h2:nth-child(1) {
+  margin: 0 -2vw; }
+
+#display h2 span:nth-child(1) {
+  color: #F25F5C; }
+
+#display h2 span:nth-child(2) {
+  color: #70C1B3; }
+
+#docDisplay {
+  text-align: center; }
+
+#docDisplay img {
+  display: block;
+  margin: 0 auto;
+  width: 100vw;
+  height: 90vh;
+  max-height: 800px;
+  max-width: 440px; }
+
+#docDisplay img:hover {
+  cursor: zoom-in; }
+
+#docDisplay img.magnify {
+  width: 100vw;
+  max-width: 1000px;
+  max-height: 1400px;
+  height: auto;
+  min-height: 90vh; }
+
+div#area div:nth-child(1) {
+  text-align: center;
+  height: 350px;
   width: 90%;
-  overflow: scroll; }
+  overflow: scroll;
+  border-top: solid 5px #F25F5C; }
 
 div#area img {
   width: 100%; }
 
-div#area hr {
-  border: solid #70C1B3 5px;
-  width: 90%; }
+div#area div#iframe {
+  border-top: solid 5px #70C1B3;
+  width: 90%;
+  height: 390px;
+  overflow: auto; }
+
+div#area iframe {
+  border: none; }
 
 footer {
   color: white;
   text-align: center;
   margin-top: 20px; }
 
-@media (max-width: 830px) {
+@media (min-width: 1100px) {
+  div#area div:nth-child(1) {
+    width: 48%;
+    height: 725px;
+    display: inline-block; }
+  div#area div#iframe {
+    width: 48%;
+    height: 725px;
+    display: inline-block; } }
+
+@media (max-width: 880px) {
   #intro {
     margin: 0 auto; }
-
   #profPic {
     display: block;
     margin: 10px auto;
     width: 200px; }
-
   div#contact {
     display: block;
     left: 0px;
     bottom: 0px; } }
-
-/*# sourceMappingURL=output.css.map */

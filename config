@@ -3,6 +3,9 @@ author                          : Hamlet
 version                         : 1.0.0
 secret                          : secret-key-for-web
 
+default-port										: 8002
+
+
 // Mail settings
 mail-smtp                       : smtp.yourwebsite.com
 mail-smtp-options               : {"secure":false,"port":25,"user":"","password":"","timeout":10000}
@@ -14,3 +17,11 @@ mail-address-copy               :
 static-url-script								: /j/
 static-url-style								: /c/
 static-url-image								: /i/
+
+
+directory-public-virtual : /client/
+directory-public : /public/
+allow-compile-script : false
+allow-compile-html : false
+allow-compile-css : false
+allow-gzip : false
